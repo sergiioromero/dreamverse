@@ -3,70 +3,38 @@ interface Props {
   title?: string;
   description?: string;
 }
-
-const { title = 'Dreamverse - Eventos Celestiales', description = 'Crea tu evento perfecto con Dreamverse' } = Astro.props;
+const { title = 'Dreamverse — Fiestas que se recuerdan', description = 'Fiestas extraordinarias para gente extraordinaria en Madrid y alrededores.' } = Astro.props;
 ---
-
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#1598e6" />
+    <meta name="description" content={description} />
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body class="bg-gradient-to-b from-sky-900 via-sky-700 to-sky-800 text-white overflow-x-hidden">
-    <!-- Fondo animado con nubes y estrellas -->
-    <div class="fixed inset-0 -z-10 overflow-hidden">
-      <!-- Gradiente base -->
-      <div class="absolute inset-0 bg-gradient-to-b from-sky-900 via-sky-700 to-sky-800"></div>
-      
-      <!-- Estrellas -->
-      <div class="absolute top-10 left-20 w-1 h-1 bg-white rounded-full animate-twinkle"></div>
-      <div class="absolute top-32 right-32 w-1.5 h-1.5 bg-white rounded-full animate-twinkle" style="animation-delay: 0.5s;"></div>
-      <div class="absolute top-64 left-1/3 w-1 h-1 bg-white rounded-full animate-twinkle" style="animation-delay: 1s;"></div>
-      <div class="absolute top-96 right-1/4 w-1.5 h-1.5 bg-white rounded-full animate-twinkle" style="animation-delay: 1.5s;"></div>
-      <div class="absolute top-20 right-10 w-1 h-1 bg-white rounded-full animate-twinkle" style="animation-delay: 2s;"></div>
-      
-      <!-- Nubes flotantes -->
-      <div class="absolute top-20 left-0 w-96 h-32 bg-white opacity-10 rounded-full filter blur-3xl animate-float"></div>
-      <div class="absolute top-1/3 right-0 w-72 h-20 bg-white opacity-5 rounded-full filter blur-3xl animate-drift" style="animation-delay: 1s;"></div>
-      <div class="absolute top-2/3 left-1/4 w-80 h-24 bg-white opacity-10 rounded-full filter blur-3xl animate-float" style="animation-delay: 2s;"></div>
-      <div class="absolute bottom-0 right-1/3 w-96 h-32 bg-white opacity-5 rounded-full filter blur-3xl animate-drift" style="animation-delay: 3s;"></div>
-    </div>
-
-    <!-- Contenido -->
-    <div class="relative z-10">
-      <slot />
-    </div>
-
-    <style is:global>
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 5px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.5);
-      }
-    </style>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <slot />
+    <script>
+      const glow = document.querySelector('.cursor-glow');
+      window.addEventListener('pointermove', (event) => {
+        if (glow) {
+          glow.animate({ left: `${event.clientX}px`, top: `${event.clientY}px` }, { duration: 700, fill: 'forwards' });
+        }
+      });
+    </script>
   </body>
 </html>
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+  :root { font-family: 'DM Sans', sans-serif; color: #f8fdff; background: #062b4a; font-synthesis: none; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; overflow-x: hidden; background: #062b4a; }
+  a { color: inherit; text-decoration: none; }
+  .noise { pointer-events: none; position: fixed; inset: 0; z-index: 20; opacity: .06; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"); }
+  .cursor-glow { position: fixed; width: 320px; height: 320px; border-radius: 50%; pointer-events: none; z-index: 0; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(101,211,255,.16), transparent 68%); filter: blur(12px); left: 50%; top: 50%; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } .cursor-glow { display: none; } }
+</style>
