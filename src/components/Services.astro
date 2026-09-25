@@ -1,0 +1,63 @@
+---
+const services = [
+  {
+    icon: '💍',
+    title: 'Bodas Celestiales',
+    description: 'Tu día especial bajo las estrellas. Decoración mágica y atmósfera única.',
+  },
+  {
+    icon: '🎉',
+    title: 'Eventos Corporativos',
+    description: 'Reuniones y conferencias con un toque extraordinario y profesional.',
+  },
+  {
+    icon: '🎂',
+    title: 'Celebraciones Privadas',
+    description: 'Cumpleaños, aniversarios y momentos inolvidables personalizados.',
+  },
+  {
+    icon: '🎪',
+    title: 'Experiencias Inmersivas',
+    description: 'Instalaciones interactivas que transportan a otro mundo.',
+  },
+];
+---
+
+<section id="servicios" class="py-24 px-4 relative">
+  <div class="max-w-6xl mx-auto">
+    <!-- Título -->
+    <div class="text-center mb-16 animate-fadeInUp">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        <span class="bg-gradient-to-r from-sky-200 to-sky-100 bg-clip-text text-transparent">
+          Nuestros Servicios
+        </span>
+      </h2>
+      <p class="text-sky-200 text-lg">Creamos experiencias mágicas para cada ocasión</p>
+    </div>
+
+    <!-- Grid de servicios -->
+    <div class="grid md:grid-cols-2 gap-8">
+      {services.map((service, index) => (
+        <div
+          class="group backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-sky-300/50 transition-all hover:bg-white/10 hover:shadow-xl hover:shadow-sky-400/20 animate-fadeInUp"
+          style={`animation-delay: ${index * 0.1}s`}
+        >
+          <div class="text-5xl mb-4 transform group-hover:scale-110 transition-transform">
+            {service.icon}
+          </div>
+          <h3 class="text-2xl font-bold mb-3 text-sky-100">{service.title}</h3>
+          <p class="text-sky-200 leading-relaxed">{service.description}</p>
+          <div class="mt-6 flex items-center gap-2 text-sky-300 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span>Conocer más</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Decoración -->
+  <div class="absolute -top-20 right-1/4 w-96 h-96 bg-sky-400 opacity-5 rounded-full filter blur-3xl"></div>
+</section>
