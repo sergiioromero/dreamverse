@@ -6,15 +6,13 @@ import Layout from '../layouts/Layout.astro';
     <!-- HERO -->
     <section class="hero">
       <div class="hero-bg">
-        <video autoplay muted loop playsinline class="bg-video">
-          <source src="https://videos.pexels.com/video-files/3587994/3587994-hd_1920_1080_30fps.mp4" type="video/mp4" />
-        </video>
+        <div class="clouds-bg"></div>
         <div class="hero-overlay"></div>
       </div>
       
       <nav class="navbar">
         <div class="container navbar-content">
-          <div class="logo">🌀 DREAMVERSE</div>
+          <div class="logo">🌤️ DREAMVERSE</div>
           <div class="nav-links">
             <a href="#fiestas">FIESTAS</a>
             <a href="#galeria">GALERÍA</a>
@@ -141,7 +139,7 @@ import Layout from '../layouts/Layout.astro';
               📍 Madrid & Alrededores
             </p>
             <p class="info-item social">
-              💫 <a href="https://instagram.com/dreamverseesp" target="_blank">@dreamverseesp</a>
+              💬 <a href="https://instagram.com/dreamverseesp" target="_blank">@dreamverseesp</a>
             </p>
           </div>
         </div>
@@ -191,9 +189,11 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   :root {
-    --primary: #0066ff;
+    --primary: #1598e6;
     --secondary: #00d4ff;
-    --accent: #ff00ff;
+    --accent: #87ceeb;
+    --dark-sky: #075383;
+    --light-sky: #7cd9ed;
     --dark: #0a0a0a;
     --light: #f0f0f0;
   }
@@ -215,25 +215,27 @@ import Layout from '../layouts/Layout.astro';
     z-index: 0;
   }
 
-  .bg-video {
+  .clouds-bg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0.4;
+    background: linear-gradient(135deg, #075383 0%, #1598e6 50%, #7cd9ed 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><filter id="turbulence"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G"/></filter></defs><path d="M0,300 Q300,250 600,300 T1200,300 L1200,400 Q600,350 0,400 Z" fill="rgba(255,255,255,0.3)" filter="url(%23turbulence)" opacity="0.8"/><path d="M0,450 Q300,400 600,450 T1200,450 L1200,550 Q600,500 0,550 Z" fill="rgba(255,255,255,0.2)" filter="url(%23turbulence)" opacity="0.6"/></svg>') center/cover;
+    background-attachment: fixed;
+    animation: cloudDrift 20s linear infinite;
   }
 
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(10, 10, 10, 0.7), rgba(0, 102, 255, 0.3), rgba(0, 212, 255, 0.1));
+    background: linear-gradient(180deg, rgba(7, 83, 131, 0.2), rgba(21, 152, 230, 0.15), rgba(124, 217, 237, 0.1));
   }
 
   .navbar {
     position: relative;
     z-index: 10;
-    background: rgba(10, 10, 10, 0.6);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     padding: 15px 0;
   }
 
@@ -249,6 +251,8 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 700;
     font-family: 'Outfit', sans-serif;
     letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(21, 152, 230, 0.3);
   }
 
   .nav-links {
@@ -260,11 +264,13 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .nav-links a {
-    transition: color 0.3s;
+    transition: all 0.3s;
+    color: #fff;
   }
 
   .nav-links a:hover {
     color: var(--secondary);
+    text-shadow: 0 0 10px var(--secondary);
   }
 
   .cta-btn {
@@ -274,12 +280,14 @@ import Layout from '../layouts/Layout.astro';
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.3s;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(21, 152, 230, 0.3);
   }
 
   .cta-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 20px var(--primary);
+    box-shadow: 0 8px 25px rgba(21, 152, 230, 0.5);
   }
 
   .hero-content {
@@ -297,10 +305,11 @@ import Layout from '../layouts/Layout.astro';
   .eyebrow {
     font-size: 12px;
     letter-spacing: 2px;
-    color: var(--secondary);
+    color: #fff;
     font-weight: 700;
     margin-bottom: 15px;
     animation: slideIn 0.8s ease-out;
+    text-shadow: 0 2px 8px rgba(0, 212, 255, 0.3);
   }
 
   .hero-title {
@@ -311,22 +320,25 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 25px;
     letter-spacing: -2px;
     animation: slideIn 0.8s ease-out 0.1s both;
+    color: #fff;
+    text-shadow: 0 4px 20px rgba(21, 152, 230, 0.4);
   }
 
   .glow-text {
-    background: linear-gradient(135deg, var(--primary), var(--accent), var(--secondary));
+    background: linear-gradient(135deg, #00d4ff, #7cd9ed, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 0 20px var(--primary));
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
   }
 
   .hero-desc {
     font-size: 18px;
-    color: var(--light);
+    color: #fff;
     margin-bottom: 30px;
-    opacity: 0.9;
+    opacity: 0.95;
     animation: slideIn 0.8s ease-out 0.2s both;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   .hero-actions {
@@ -348,22 +360,25 @@ import Layout from '../layouts/Layout.astro';
 
   .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: #000;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(21, 152, 230, 0.3);
   }
 
   .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 30px var(--primary);
+    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.5);
   }
 
   .btn-secondary {
-    border-color: var(--secondary);
-    color: var(--secondary);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .btn-secondary:hover {
-    background: var(--secondary);
-    color: #000;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--secondary);
+    color: var(--secondary);
   }
 
   .floating-shapes {
@@ -379,7 +394,8 @@ import Layout from '../layouts/Layout.astro';
     position: absolute;
     font-size: 60px;
     animation: float 3s infinite;
-    opacity: 0.6;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
   }
 
   .shape-1 {
@@ -408,9 +424,20 @@ import Layout from '../layouts/Layout.astro';
 
   /* FIESTAS SECTION */
   .fiestas {
-    background: linear-gradient(180deg, #1a1a1a, #0a0a0a);
+    background: linear-gradient(180deg, rgba(7, 83, 131, 0.15), rgba(10, 10, 10, 0.9));
     padding: 80px 0;
     position: relative;
+  }
+
+  .fiestas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path d="M0,100 Q300,50 600,100 T1200,100 L1200,200 L0,200 Z" fill="rgba(255,255,255,0.05)" opacity="0.6"/></svg>') center/cover;
+    pointer-events: none;
   }
 
   .section-title {
@@ -420,10 +447,10 @@ import Layout from '../layouts/Layout.astro';
     text-align: center;
     margin-bottom: 60px;
     letter-spacing: -1px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(21, 152, 230, 0.3);
+    position: relative;
+    z-index: 1;
   }
 
   .fiestas-grid {
@@ -431,16 +458,19 @@ import Layout from '../layouts/Layout.astro';
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
   }
 
   .fiesta-card {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    border: 2px solid rgba(0, 212, 255, 0.2);
+    background: linear-gradient(135deg, rgba(21, 152, 230, 0.15), rgba(7, 83, 131, 0.2));
+    border: 2px solid rgba(124, 217, 237, 0.4);
     border-radius: 15px;
     overflow: hidden;
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.5s ease-out;
+    backdrop-filter: blur(10px);
   }
 
   .fiesta-card.animate-in {
@@ -449,9 +479,9 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .fiesta-card:hover {
-    border-color: var(--primary);
+    border-color: var(--secondary);
     transform: translateY(-10px);
-    box-shadow: 0 0 30px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
   }
 
   .card-img {
@@ -465,7 +495,7 @@ import Layout from '../layouts/Layout.astro';
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 102, 255, 0.2);
+    background: rgba(7, 83, 131, 0.3);
   }
 
   .card-content {
@@ -478,6 +508,7 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 700;
     margin-bottom: 12px;
     letter-spacing: 1px;
+    color: #fff;
   }
 
   .card-content p {
@@ -489,7 +520,7 @@ import Layout from '../layouts/Layout.astro';
 
   .tag {
     display: inline-block;
-    background: rgba(0, 212, 255, 0.2);
+    background: rgba(21, 152, 230, 0.2);
     border: 1px solid var(--secondary);
     padding: 6px 14px;
     border-radius: 20px;
@@ -501,7 +532,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* GALERÍA */
   .galeria {
-    background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.9), rgba(7, 83, 131, 0.1));
     padding: 80px 0;
     position: relative;
   }
@@ -530,6 +561,7 @@ import Layout from '../layouts/Layout.astro';
     opacity: 0;
     transform: scale(0.95);
     transition: all 0.5s ease-out;
+    border: 2px solid rgba(124, 217, 237, 0.3);
   }
 
   .gallery-item.animate-in {
@@ -541,22 +573,24 @@ import Layout from '../layouts/Layout.astro';
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 102, 255, 0.1);
+    background: rgba(21, 152, 230, 0.15);
     transition: all 0.3s;
     z-index: 2;
   }
 
   .gallery-item:hover::before {
-    background: rgba(0, 102, 255, 0.3);
+    background: rgba(21, 152, 230, 0.4);
   }
 
   .gallery-item:hover {
     transform: scale(1.05);
+    border-color: var(--secondary);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
   }
 
   /* STATS */
   .stats {
-    background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+    background: linear-gradient(135deg, #075383 0%, #1598e6 50%, #7cd9ed 100%);
     padding: 60px 0;
     position: relative;
     overflow: hidden;
@@ -566,7 +600,7 @@ import Layout from '../layouts/Layout.astro';
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .stats .container {
@@ -579,7 +613,7 @@ import Layout from '../layouts/Layout.astro';
 
   .stat-box {
     text-align: center;
-    color: #000;
+    color: #fff;
   }
 
   .stat-box h3 {
@@ -587,6 +621,7 @@ import Layout from '../layouts/Layout.astro';
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   .stat-box p {
@@ -597,7 +632,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* CONTACTO */
   .contacto {
-    background: linear-gradient(180deg, #1a1a1a, #0a0a0a);
+    background: linear-gradient(180deg, rgba(7, 83, 131, 0.1), rgba(10, 10, 10, 0.95));
     padding: 80px 0;
     position: relative;
   }
@@ -619,7 +654,7 @@ import Layout from '../layouts/Layout.astro';
   .contact-form input,
   .contact-form textarea {
     background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(0, 212, 255, 0.2);
+    border: 2px solid rgba(124, 217, 237, 0.3);
     border-radius: 10px;
     padding: 15px 20px;
     color: #fff;
@@ -637,8 +672,8 @@ import Layout from '../layouts/Layout.astro';
   .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary);
-    background: rgba(0, 102, 255, 0.05);
-    box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+    background: rgba(21, 152, 230, 0.08);
+    box-shadow: 0 0 20px rgba(21, 152, 230, 0.3);
   }
 
   .contact-form button {
@@ -646,10 +681,11 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .contact-info {
-    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 255, 0.05));
-    border: 2px solid rgba(0, 212, 255, 0.2);
+    background: linear-gradient(135deg, rgba(21, 152, 230, 0.1), rgba(124, 217, 237, 0.08));
+    border: 2px solid rgba(124, 217, 237, 0.4);
     border-radius: 12px;
     padding: 40px 30px;
+    backdrop-filter: blur(10px);
   }
 
   .contact-info h3 {
@@ -657,22 +693,25 @@ import Layout from '../layouts/Layout.astro';
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     margin-bottom: 30px;
+    color: #fff;
   }
 
   .info-item {
     font-size: 15px;
     margin-bottom: 20px;
     line-height: 1.8;
+    color: #fff;
   }
 
   .info-item a {
     color: var(--secondary);
     font-weight: 600;
-    transition: color 0.3s;
+    transition: all 0.3s;
   }
 
   .info-item a:hover {
     color: var(--primary);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
   }
 
   .info-item.social a {
@@ -682,7 +721,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* FOOTER */
   .footer {
-    background: #000;
+    background: rgba(0, 0, 0, 0.8);
     border-top: 2px solid var(--primary);
     padding: 30px 0;
     text-align: center;
@@ -716,6 +755,15 @@ import Layout from '../layouts/Layout.astro';
     }
     75% {
       transform: translateY(20px) rotate(-5deg);
+    }
+  }
+
+  @keyframes cloudDrift {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100px 0;
     }
   }
 
