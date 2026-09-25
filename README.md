@@ -1,18 +1,17 @@
-# Dreamverse ✦
+# 🌀 DREAMVERSE
 
-Landing page para **Dreamverse**, fiestas y experiencias para gente joven en Madrid y alrededores.
+Fiestas y experiencias para gente joven en Madrid.
 
-## Stack
-
+## 🚀 Stack
 - Astro
-- Tailwind CSS
-- CSS animations y composición visual responsive
+- CSS moderno (sin frameworks)
+- Animaciones optimizadas
+- Mobile-first responsive
 
-## Desarrollo
-
+## 📱 Desarrollo
 ```bash
 npm install
 npm run dev
 ```
 
-El formulario abre el cliente de correo con un mensaje dirigido a `dreamverseesp@gmail.com`. Instagram: [@dreamverseesp](https://instagram.com/dreamverseesp).
+**Contacto:** dreamverseesp@gmail.com | 640 25 40 70 | [@dreamverseesp](https://instagram.com/dreamverseesp)
