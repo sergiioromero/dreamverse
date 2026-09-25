@@ -1,0 +1,843 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="clouds-bg"></div>
+        <div class="hero-overlay"></div>
+      </div>
+      
+      <nav class="navbar">
+        <div class="container navbar-content">
+          <div class="logo">🌤️ DREAMVERSE</div>
+          <div class="nav-links">
+            <a href="#fiestas">FIESTAS</a>
+            <a href="#galeria">GALERÍA</a>
+            <a href="#contacto">CONTACTO</a>
+          </div>
+          <a href="#contacto" class="cta-btn">¡MONTAMOS LA TUYA!</a>
+        </div>
+      </nav>
+
+      <div class="hero-content container">
+        <div class="hero-text">
+          <p class="eyebrow">✨ FIESTAS PARA GENTE JOVEN ✨</p>
+          <h1 class="hero-title">TU NOCHE<br/><span class="glow-text">EXPLOTA</span><br/>CON NOSOTROS</h1>
+          <p class="hero-desc">Música. Luces. Vibraciones que no se olvidan. Desde Madrid a todo lo que rodea.</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary">QUIERO MI FIESTA →</a>
+            <a href="#galeria" class="btn btn-secondary">VER FIESTAS ↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-shapes">
+        <div class="shape shape-1">🎉</div>
+        <div class="shape shape-2">🎵</div>
+        <div class="shape shape-3">✨</div>
+        <div class="shape shape-4">🎶</div>
+      </div>
+    </section>
+
+    <!-- TIPOS DE FIESTAS -->
+    <section id="fiestas" class="fiestas">
+      <div class="container">
+        <h2 class="section-title">¿QUÉ TIPO DE UNIVERSO CREAS?</h2>
+        
+        <div class="fiestas-grid">
+          <div class="fiesta-card">
+            <div class="card-img" style="background: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+            <div class="card-content">
+              <h3>SUNSET PARTY</h3>
+              <p>Atardecer, rooftop y las mejores ondas. Cuando empieza a oscurecer, empieza la magia.</p>
+              <span class="tag">INTIMISTA</span>
+            </div>
+          </div>
+
+          <div class="fiesta-card">
+            <div class="card-img" style="background: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+            <div class="card-content">
+              <h3>NEON BLAST</h3>
+              <p>Luces, neón, discoteca y la energía al máximo. Esto es lo tuyo si quieres explotar.</p>
+              <span class="tag">ELECTRIZANTE</span>
+            </div>
+          </div>
+
+          <div class="fiesta-card">
+            <div class="card-img" style="background: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+            <div class="card-content">
+              <h3>PRIVATE UNIVERSE</h3>
+              <p>Tu grupo, tu vibe, tus reglas. Una experiencia exclusiva para los tuyos.</p>
+              <span class="tag">PERSONALIZADO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA VISUAL -->
+    <section id="galeria" class="galeria">
+      <div class="container">
+        <h2 class="section-title">LO QUE CREAMOS</h2>
+        <p class="section-subtitle">Estos son momentos de nuestras fiestas. Podrían ser los tuyos.</p>
+        
+        <div class="gallery-grid">
+          <div class="gallery-item item-1" style="background: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="gallery-item item-2" style="background: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="gallery-item item-3" style="background: url('https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="gallery-item item-4" style="background: url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="gallery-item item-5" style="background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+          <div class="gallery-item item-6" style="background: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="stats">
+      <div class="container">
+        <div class="stat-box">
+          <h3>500+</h3>
+          <p>personas en fiesta</p>
+        </div>
+        <div class="stat-box">
+          <h3>40+</h3>
+          <p>fiestas organizadas</p>
+        </div>
+        <div class="stat-box">
+          <h3>100%</h3>
+          <p>recomendación</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto" class="contacto">
+      <div class="container">
+        <h2 class="section-title">¿TIENES UNA IDEA LOCA?</h2>
+        <p class="section-subtitle">Cuéntanos y hacemos que pase. Somos todos oídos.</p>
+        
+        <div class="contact-grid">
+          <form class="contact-form" id="contactoForm">
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <input type="email" name="email" placeholder="Tu email" required />
+            <textarea name="mensaje" placeholder="¿Qué quieres celebrar?" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary">ENVIAR MENSAJE →</button>
+          </form>
+
+          <div class="contact-info">
+            <h3>CONTÁCTANOS</h3>
+            <p class="info-item">
+              📧 <a href="mailto:dreamverseesp@gmail.com">dreamverseesp@gmail.com</a>
+            </p>
+            <p class="info-item">
+              📱 <a href="tel:+34640254070">640 25 40 70</a>
+            </p>
+            <p class="info-item">
+              📍 Madrid & Alrededores
+            </p>
+            <p class="info-item social">
+              💬 <a href="https://instagram.com/dreamverseesp" target="_blank">@dreamverseesp</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2024 DREAMVERSE • Fiestas que se recuerdan • <a href="https://instagram.com/dreamverseesp" target="_blank">@dreamverseesp</a></p>
+      </div>
+    </footer>
+  </main>
+</Layout>
+
+<script>
+  const form = document.getElementById('contactoForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nombre = form.querySelector('input[name="nombre"]').value;
+      const email = form.querySelector('input[name="email"]').value;
+      const mensaje = form.querySelector('textarea[name="mensaje"]').value;
+      const asunto = encodeURIComponent('Nueva solicitud de fiesta - ' + nombre);
+      const body = encodeURIComponent(`Hola Dreamverse,\n\nNombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`);
+      window.location.href = `mailto:dreamverseesp@gmail.com?subject=${asunto}&body=${body}`;
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.fiesta-card, .gallery-item').forEach((el) => {
+    observer.observe(el);
+  });
+</script>
+
+<style>
+  :root {
+    --primary: #1598e6;
+    --secondary: #00d4ff;
+    --accent: #87ceeb;
+    --dark-sky: #075383;
+    --light-sky: #7cd9ed;
+    --dark: #0a0a0a;
+    --light: #f0f0f0;
+  }
+
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    background: #0b7ad7;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .clouds-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.18)),
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,0.8) 0 8%, transparent 9%),
+      radial-gradient(circle at 23% 24%, rgba(255,255,255,0.9) 0 10%, transparent 12%),
+      radial-gradient(circle at 35% 20%, rgba(255,255,255,0.82) 0 9%, transparent 11%),
+      radial-gradient(circle at 50% 18%, rgba(255,255,255,0.74) 0 7%, transparent 10%),
+      radial-gradient(circle at 60% 25%, rgba(255,255,255,0.85) 0 9%, transparent 11%),
+      radial-gradient(circle at 72% 18%, rgba(255,255,255,0.8) 0 10%, transparent 12%),
+      radial-gradient(circle at 86% 22%, rgba(255,255,255,0.82) 0 9%, transparent 11%),
+      linear-gradient(180deg, #0d5b9f 0%, #1987da 44%, #64c6ef 100%);
+    background-size: cover;
+    filter: saturate(1.2);
+    opacity: 0.96;
+  }
+
+  .clouds-bg::before,
+  .clouds-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+  }
+
+  .clouds-bg::before {
+    background-image: url('/dreamverse-clouds.svg');
+    background-position: center 18%;
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+
+  .clouds-bg::after {
+    background: radial-gradient(circle at 50% 55%, rgba(255,255,255,0.18), transparent 30%);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(7, 83, 131, 0.18), rgba(21, 152, 230, 0.1), rgba(124, 217, 237, 0.1));
+  }
+
+  .navbar {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 0;
+  }
+
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(21, 152, 230, 0.3);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .nav-links a {
+    transition: all 0.3s;
+    color: #fff;
+  }
+
+  .nav-links a:hover {
+    color: var(--secondary);
+    text-shadow: 0 0 10px var(--secondary);
+  }
+
+  .cta-btn {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(21, 152, 230, 0.3);
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(21, 152, 230, 0.5);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  .hero-text {
+    max-width: 640px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 15px;
+    animation: slideIn 0.8s ease-out;
+    text-shadow: 0 2px 8px rgba(0, 212, 255, 0.3);
+  }
+
+  .hero-title {
+    font-size: clamp(42px, 8vw, 92px);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+    animation: slideIn 0.8s ease-out 0.1s both;
+    color: #fff;
+    text-shadow: 0 4px 20px rgba(21, 152, 230, 0.4);
+  }
+
+  .glow-text {
+    background: linear-gradient(135deg, #00d4ff, #7cd9ed, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+  }
+
+  .hero-desc {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    animation: slideIn 0.8s ease-out 0.2s both;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    display: inline-block;
+    border: 2px solid transparent;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(21, 152, 230, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.5);
+  }
+
+  .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+
+  .floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .shape {
+    position: absolute;
+    font-size: 60px;
+    animation: float 3s infinite;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+  }
+
+  .shape-1 {
+    top: 15%;
+    right: 10%;
+    animation-delay: 0s;
+  }
+
+  .shape-2 {
+    top: 40%;
+    right: 5%;
+    animation-delay: 0.5s;
+  }
+
+  .shape-3 {
+    top: 60%;
+    left: 10%;
+    animation-delay: 1s;
+  }
+
+  .shape-4 {
+    top: 30%;
+    left: 5%;
+    animation-delay: 1.5s;
+  }
+
+  .fiestas {
+    background: linear-gradient(180deg, rgba(7, 83, 131, 0.15), rgba(10, 10, 10, 0.9));
+    padding: 80px 0;
+    position: relative;
+  }
+
+  .fiestas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><path d="M0,100 Q300,50 600,100 T1200,100 L1200,200 L0,200 Z" fill="rgba(255,255,255,0.05)" opacity="0.6"/></svg>') center/cover;
+    pointer-events: none;
+  }
+
+  .section-title {
+    font-size: clamp(32px, 6vw, 64px);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: -1px;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(21, 152, 230, 0.3);
+    position: relative;
+    z-index: 1;
+  }
+
+  .fiestas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .fiesta-card {
+    background: linear-gradient(135deg, rgba(21, 152, 230, 0.15), rgba(7, 83, 131, 0.2));
+    border: 2px solid rgba(124, 217, 237, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-out;
+    backdrop-filter: blur(10px);
+  }
+
+  .fiesta-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fiesta-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  }
+
+  .card-img {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 83, 131, 0.3);
+  }
+
+  .card-content {
+    padding: 30px 25px;
+  }
+
+  .card-content h3 {
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+  .card-content p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(21, 152, 230, 0.2);
+    border: 1px solid var(--secondary);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--secondary);
+    letter-spacing: 1px;
+  }
+
+  .galeria {
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.9), rgba(7, 83, 131, 0.1));
+    padding: 80px 0;
+    position: relative;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 50px;
+    margin-top: -30px;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  .gallery-item {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.5s ease-out;
+    border: 2px solid rgba(124, 217, 237, 0.3);
+  }
+
+  .gallery-item.animate-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .gallery-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(21, 152, 230, 0.15);
+    transition: all 0.3s;
+    z-index: 2;
+  }
+
+  .gallery-item:hover::before {
+    background: rgba(21, 152, 230, 0.4);
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.05);
+    border-color: var(--secondary);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+
+  .stats {
+    background: linear-gradient(135deg, #075383 0%, #1598e6 50%, #7cd9ed 100%);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stats::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stat-box {
+    text-align: center;
+    color: #fff;
+  }
+
+  .stat-box h3 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .stat-box p {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .contacto {
+    background: linear-gradient(180deg, rgba(7, 83, 131, 0.1), rgba(10, 10, 10, 0.95));
+    padding: 80px 0;
+    position: relative;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+    margin-top: 50px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(124, 217, 237, 0.3);
+    border-radius: 10px;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #777;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(21, 152, 230, 0.08);
+    box-shadow: 0 0 20px rgba(21, 152, 230, 0.3);
+  }
+
+  .contact-form button {
+    margin-top: 10px;
+  }
+
+  .contact-info {
+    background: linear-gradient(135deg, rgba(21, 152, 230, 0.1), rgba(124, 217, 237, 0.08));
+    border: 2px solid rgba(124, 217, 237, 0.4);
+    border-radius: 12px;
+    padding: 40px 30px;
+    backdrop-filter: blur(10px);
+  }
+
+  .contact-info h3 {
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+
+  .info-item {
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #fff;
+  }
+
+  .info-item a {
+    color: var(--secondary);
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .info-item a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  }
+
+  .info-item.social a {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .footer {
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid var(--primary);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+  }
+
+  .footer a {
+    color: var(--secondary);
+    font-weight: 600;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+    75% {
+      transform: translateY(20px) rotate(-5deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar-content {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .nav-links {
+      order: 3;
+      width: 100%;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .cta-btn {
+      order: 2;
+    }
+
+    .hero-text {
+      max-width: 100%;
+    }
+
+    .hero-title {
+      font-size: 42px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .fiestas-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .section-title {
+      font-size: 32px;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats .container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+</style>
